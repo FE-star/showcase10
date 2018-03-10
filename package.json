@@ -1,0 +1,22 @@
+{
+  "name": "showcase10",
+  "version": "1.0.0",
+  "description": "Asynchronous Programing",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yorts52/showcase10.git"
+  },
+  "author": "yorts52 <yorts52@gmail.com> (https://yorts52.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yorts52/showcase10/issues"
+  },
+  "homepage": "https://github.com/yorts52/showcase10#readme",
+  "dependencies": {
+    "rxjs": "^5.5.6"
+  }
+}
