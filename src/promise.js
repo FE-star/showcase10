@@ -2,12 +2,13 @@
  * @Author: kael 
  * @Date: 2018-03-10 10:06:24 
  * @Last Modified by: kael
- * @Last Modified time: 2018-03-10 11:51:11
+ * @Last Modified time: 2018-03-10 13:31:18
  */
 
 const fs = require('fs');
 const util = require('util');
 
+// promisify callbackify
 const readFile = util.promisify(fs.readFile);
 
 module.exports = async function(cb) {
