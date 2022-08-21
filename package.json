@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/yorts52/showcase10#readme",
   "dependencies": {
-    "rxjs": "^5.5.6"
+    "rxjs": "^7.5.5"
   }
 }

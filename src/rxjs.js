@@ -6,30 +6,15 @@
  */
 
 const fs = require('fs');
-const Rx = require('rxjs');
+const { forkJoin, bindNodeCallback } = require('rxjs');
 
-const readFile = Rx.Observable.bindNodeCallback(fs.readFile);
-
-// let A = Rx.Observable.create((observer) => {
-//   fs.readFile('../data/A.txt', (err, data) => {
-//     observer.next(data);
-//     observer.complete();
-//   });
-// });
-
-// let B = Rx.Observable.create((observer) => {
-//   fs.readFile('../data/B.txt', (err, data) => {
-//     observer.next(data);
-//     observer.complete();
-//   });
-// });
+const readFile = bindNodeCallback(fs.readFile);
 
 module.exports = function(cb) {
   let A = readFile('../data/A.txt');
   let B = readFile('../data/B.txt');
-
-  Rx.Observable
-    .forkJoin(A, B)
+  
+  forkJoin([A, B])
     .subscribe(([A, B]) => {
       cb(parseInt(A, 10) + parseInt(B, 10));
     });
